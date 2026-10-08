@@ -13,7 +13,7 @@ export function CinemaShell({ children }: { children: ReactNode }) {
         </Link>
         <nav className="main-nav" aria-label="Navegación principal">
           <Link to="/" className={`nav-item ${location.pathname === '/' ? 'active' : ''}`}>Cartelera</Link>
-          <Link to="/comprar" className={`nav-item ${location.pathname === '/comprar' ? 'active' : ''}`}>Funciones <ArrowUpRight size={13} className="ml-1" /></Link>
+          <Link to="/comprar" search={{ pelicula: '', titulo: '' }} className={`nav-item ${location.pathname === '/comprar' ? 'active' : ''}`}>Funciones <ArrowUpRight size={13} className="ml-1" /></Link>
         </nav>
         <span className="header-note"><span className="status-dot" /> NOS VEMOS EN EL CINE.</span>
       </div>

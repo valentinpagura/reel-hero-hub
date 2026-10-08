@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { peliculas } from '@/lib/catalogue';
 
 export const Route = createFileRoute('/comprar')({
-  validateSearch: (search: Record<string, unknown>) => ({ pelicula: typeof search.pelicula === 'string' ? search.pelicula : '', titulo: typeof search.titulo === 'string' ? search.titulo : '' }),
+  validateSearch: (search: Record<string, unknown>) => ({ pelicula: typeof search['pelicula'] === 'string' ? search['pelicula'] : '', titulo: typeof search['titulo'] === 'string' ? search['titulo'] : '' }),
   head: () => ({ meta: [
     { title: 'Funciones — CINE! Una función, un plan' },
     { name: 'description', content: 'Consultá las funciones de tus películas favoritas en CINE!.' },
